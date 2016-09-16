@@ -16,6 +16,7 @@ for(var i=0; i < 20; i++) {
     y: Math.random() * 20 + 100
   }));
 }
+// sort snakes with snakes.sort(function(s1,s2) {return ???});
 
 /**
  * @function masterLoop
@@ -53,6 +54,6 @@ function update(elapsedTime) {
 function render(elapsedTime, ctx) {
   ctx.fillStyle = "lightblue";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  player.render(elapsedTime, ctx);
   snakes.forEach(function(snake){snake.render(elapsedTime, ctx);});
+  player.render(elapsedTime, ctx);
 }
